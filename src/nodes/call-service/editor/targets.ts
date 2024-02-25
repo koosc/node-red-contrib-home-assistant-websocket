@@ -220,10 +220,12 @@ export const displayValidTargets = () => {
         `${areaIdSelector}, ${deviceIdSelector}, ${entityIdSelector}`,
     );
     if (validTargets === ValidTargetNone) {
-        $ids.parent().hide();
+        // $ids.parent().hide();
+        console.warn('IDs hid here. Disabled.');
     } else {
         if (validTargets === ValidTargetEntityOnly) {
-            $ids.parent().hide();
+            // $ids.parent().hide();
+            console.warn('IDs hid here. Disabled 2.');
             $(entityIdSelector).parent().show();
         } else {
             $ids.parent().show();
